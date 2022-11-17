@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.bottomsheet.MealBottomSheetFragment"
+    android:id="@+id/bottomSheet">
+
+    <ImageView
+        android:id="@+id/imgVBottomSheep"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_80sdp"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="@dimen/_5sdp"/>
+
+    <LinearLayout
+        android:id="@+id/lyBottomSheet"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toEndOf="@+id/imgVBottomSheep"
+        app:layout_constraintTop_toTopOf="@id/imgVBottomSheep"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="@dimen/_5sdp">
+
+        <TextView
+            android:id="@+id/txtVBottomSheetLocation"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/txtVBottomSheetCategory"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtVBottomSheetMealName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Meal name"
+        app:layout_constraintStart_toStartOf="@id/lyBottomSheet"
+        app:layout_constraintTop_toBottomOf="@id/lyBottomSheet"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:textColor="@color/g_black"
+        android:fontFamily="@font/myfont"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Read more..."
+        app:layout_constraintStart_toStartOf="@id/txtVBottomSheetMealName"
+        app:layout_constraintTop_toBottomOf="@id/txtVBottomSheetMealName"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:fontFamily="@font/myfont"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
